@@ -1,0 +1,235 @@
+*{
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin:0 auto;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.padding_left{
+    padding-left:10px
+}
+
+.padding_right{
+    margin-right: 10px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex_edit{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container{
+    width:95%;
+    margin: 0 auto
+}
+
+#container{
+    width:100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:20px 0;
+    opacity:1
+}
+
+#main_header{
+    width:100%;
+    background-color: #f4f4f4;
+    border: 1px #dbdbdb solid
+}
+
+#main_header p{
+    color:#545454
+}
+
+#open_popup{
+    background-color: #337cb8;
+    color: white;
+    height:35px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+select{
+    width:80px;
+    height:30px;
+    padding-left: 10px;
+    font-weight: 300;
+    border:1px solid #dadada;
+    border-radius: 5px;
+}
+
+#search_container{
+    width:100%;
+    border: 1px #dbdbdb solid;
+    font-weight: 300;
+}
+
+.search p{
+    padding-right:15px
+}
+
+.no_data_msg{
+    text-align: center;
+    font-size: 16px;
+    padding:10px 0;
+    margin: 0;
+    border: 1px #dbdbdb solid;
+}
+
+.main_list{
+    width:100%;
+    border-collapse: collapse;
+}
+
+.main_list tr,th{
+    text-align: left;
+    border:1px #dbdbdb solid;
+    height:30px;
+    border-collapse: collapse;
+    padding-left:10px;
+    font-weight: 500;
+}
+
+.block{
+    margin-bottom: 50px;
+}
+
+.hidden{
+    display:none
+}
+
+.edited_error_msg, .error_msg{
+    color:rgb(99, 29, 29);
+    font-size:22px;
+    margin-top:150px;
+    text-align:center;
+}
+
+.Popup{
+    position:absolute;
+    width:90%;
+    top:200px;
+    left:50px;
+    background-color: white;
+    z-index: 1;
+    border:1px #1f5d8f solid;
+    padding:20px 0;
+}
+
+.Popup form{
+    width:70%;
+    margin-left:-7%
+}
+
+.Popup input{
+    width:80%;
+    height:30px;
+    padding-left:5px;
+    border-radius: 5px;
+    border:1px #1f5d8f solid;
+}
+
+.add_action{    height:35px;
+    border:1px solid white;
+    width:50px;
+    cursor:pointer;
+    background-color: #337cb8;
+    color: white;
+    border-radius:5px;
+}
+
+.font th{
+    font-weight: 300;
+    color:#685e60
+}
+
+.close_popup{
+    width:60px;
+    height:35px;
+    border:1px solid white;
+    background-color: red;
+    border-radius: 5px;
+    color:white;
+    cursor:pointer;
+    align-self: center;
+    margin-left:-150px
+}
+
+.list{
+    width:100%;
+    padding:0;
+    margin: 0
+}
+
+.white{
+    background-color: white;
+}
+
+.grey{
+    background-color: #f4f4f4;;
+}
+
+.actions_style{
+    background:transparent;
+    border:none;
+    color:#337cb8;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    border:none
+}
+
+.fa-edit, .fa-trash{
+    pointer-events: none;
+}
+
+.pagination{
+    border: 1px #dbdbdb solid;
+    background-color: #f4f4f4;
+    font-weight: 300;
+    color:#685e60;
+    margin:0
+}
+
+.pagination button{
+    background-color: white;
+    border: 1px solid #dadada;
+    color: #337cb8;
+    width:30px;
+    height: 40px;
+    cursor: pointer;
+    margin:0 2px
+}
+
+.pagination button:hover{
+    background-color:#337cb8 ;
+    color: white;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+    <script src="https://kit.fontawesome.com/3a0bcc5810.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,700&display=swap" rel="stylesheet">
+<body>
+    <div class="main_container">
+    <p id="error_msg"class="hidden error_msg">All fields are required and should not contain numbers</p>
+<div id="addRecordPopup" class="hidden Popup"> 
+    <form action="submit" class="flex_edit" onsubmit="addRecord()">
+        <div class="block">
+            <p>First name:</p>
+            <input id="first_name" type="text" > 
+        </div>
+        <div class="block"> 
+            <p>Last Name:</p>
+            <input id="last_name" type="text" >
+        </div>
+        <div class="block">
+            <p>City:</p>
+            <input id="city" type="text">
+        </div>
+        <button id="add_record" class = "add_action">+Add</button>
+    </form>
+    <button class="close_popup" onclick="closePopUp()">Cancel</button>
+</div>
+<p id="edited_error_msg"class="hidden edited_error_msg">All fields are required and should not contain numbers</p>
+<div id="edit_record" class="hidden Popup">
+    <form action="submit" class="flex_edit" onsubmit="editRecord()">
+        <div class="block">
+            <p>First name:</p>
+            <input id="editable_first_name" type="text" placeholder="First Name"> 
+        </div>
+        <div class="block"> 
+            <p>Last Name:</p>
+            <input id="editable_last_name" type="text" placeholder="Last Name">
+        </div>
+        <div class="block">
+            <p>City:</p>
+            <input id="editable_city" type="text" placeholder="City">
+        </div>
+        <button id="save_record" class = "add_action">Save</button>
+    </form>
+    <button class="close_popup" onclick="closeEditPopup()">Cancel</button>
+</div>
+<div id = "container">
+    <div id="main_header" class='flex-row'>
+        <p class="padding_left">Main List</p> 
+        <button id = "open_popup" class="padding_right" onclick="openPopup()"> <i class="fas fa-plus-circle"></i>  Add record</button>
+    </div>
+    <div id="search_container" class="flex-row "><p class="padding_left">Show</i>
+        <select id="page_rows_count">
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+        </select>
+        per page</p>
+        <div class="flex_edit search padding_right" >
+            <p>Search:</p>
+            <input type="text" onkeyup="search()"id="searchbox">
+        </div>
+    </div>
+    <div class="list">     
+        <table id="main_list" class="main_list">
+            <tr> 
+                <th>Full Name</th>
+                <th>City</th>
+                <th>Sign up Date</th>
+                <th>Sign up Time</th>
+                <th>Action</th>
+            </tr>
+            
+        </table>
+        <p class="no_data_msg">No data</p>
+        <div class="pagination flex-row">
+            <p class="padding_left" id = "page_count">Page 1 out of 1</p>
+            <div id="page_number"class="padding_right">
+                <button><</button>
+                <button>1</button>
+                <button>></button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
