@@ -26,21 +26,11 @@ var selectedName = {
 
 var table =[]
 
-//Add page qty
-function addPageNumber(){
-    if(mainList.rows.length%sel.value ===2 && mainList.rows.length/sel.value >1){
-        var newBtn = document.createElement("button")
-        newBtn.innerHTML = Math.ceil(mainList.rows.length/sel.value )
-        pageCount.insertBefore(newBtn, pageCount.children[pageCount.children.length-1])
-        document.getElementById("page_count").innerHTML = "Page 1 out of " + Math.ceil(mainList.rows.length/sel.value )
-        console.log(sel.value)
-    }
-}
 //No data function
 function noDataMsg(){
-    if(mainList.rows.length>1){
+    if(mainList.rows.length>2){
         noData.classList.add("hidden")
-    }else if(mainList.rows.length==1 && noData.classList.contains("hidden")){
+    }else if(mainList.rows.length==2 && noData.classList.contains("hidden")){
         noData.classList.remove("hidden")
     }
 }
@@ -158,14 +148,19 @@ function addRecord(){
     var fullName = firstNameInput.value  + " "+ lastNameInput.value
     var newRaw = document.createElement("tr")
     newRaw.classList.add("font")
+    newRaw.classList.add("table_record")
     var newDataName = document.createElement("th")
+    newDataName.classList.add("table_record")
     var cityName = document.createElement("th")
+    cityName.classList.add("table_record")
     var date = document.createElement("th")
+    date.classList.add("table_record")
     var time = document.createElement("th")
+    time.classList.add("table_record")
     var deleteButton = createDeleteButton()
     var editButton = createEditButton()
     var actions = document.createElement("th")
-    actions.classList.add("actions")
+    actions.classList.add("actions", "table_record")
     actions.appendChild(editButton)
     actions.appendChild(deleteButton)
     time.innerHTML = d.getHours() + ":" + d.getMinutes()
@@ -188,7 +183,6 @@ function addRecord(){
     newRaw.appendChild(time)
     newRaw.appendChild(actions)
     table.push(newRaw)
-    addPageNumber()
     noDataMsg()
     clearInputValues()
     closePopUp()
